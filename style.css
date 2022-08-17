@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.8rem;
+}
+
+.page__wrapper {
+  margin-left: 160px;
+}
+
+.navtop {
+  display: flex;
+  min-height: 8rem;
+  height: 10vh;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid red;
+  z-index: 10;
+  background-color: white;
+}
+
+.navtop__logowrapper {
+  display: flex;
+  align-items: center;
+}
+
+.navtop__menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navtop__menu li {
+  padding: 0 1rem;
+}
+
+.navtop__cta {
+  margin-right: 10rem;
+}
+
+.main {
+  display: flex;
+  height: 90vh;
+  position: relative;
+  z-index: -10;
+}
+
+.main__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main__imagewrapper {
+  position: relative;
+  flex: 3 0 60%;
+  border: 1px solid red;
+  top: -15rem;
+  background-image: url('images/image-mockups.png'),
+    url('images/bg-intro-desktop.svg');
+  background-position: 25% 120%;
+  background-repeat: no-repeat;
+}
+
+.main__img1 {
+  width: 100%;
+  position: absolute;
+}
+
+.main__img2 {
+  position: absolute;
+  z-index: 2;
+}
+
+.advantages__wrapper,
+.articles__wrapper {
+  display: flex;
+}

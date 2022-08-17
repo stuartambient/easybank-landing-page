@@ -11,7 +11,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Easybank landing page</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -29,8 +29,7 @@
     <div class="page__wrapper">
       <nav class="navtop">
         <div class="navtop__logowrapper">
-          <img src="images/icon-hamburger.svg" alt="" class="navtop__logo" />
-          <span>easybank</span>
+          <img src="images/logo.svg" alt="" class="navtop__logo" />
         </div>
         <ul class="navtop__menu">
           <li class="navtop__menuitems">Home</li>
@@ -43,17 +42,23 @@
       </nav>
 
       <main class="main">
-        <h1>Next generation digital banking</h1>
-        <p>
-          Take your financial life online. Your Easybank account will be a
-          one-stop-shop for spending, saving, budgeting, investing, and much
-          more.
-        </p>
-        <p class="main__cta">Request Invite</p>
-        <div class="main__imagewrapper">
-          <img src="images/bg-intro-desktop.svg" alt="" />
-          <img src="images/image-mockups.png" alt="" />
+        <div class="main__text">
+          <h1>Next generation digital banking</h1>
+          <p>
+            Take your financial life online. Your Easybank account will be a
+            one-stop-shop for spending, saving, budgeting, investing, and much
+            more.
+          </p>
+          <p class="main__cta">Request Invite</p>
         </div>
+
+        <div class="main__imagewrapper">
+          <!-- <img src="images/bg-intro-desktop.svg" alt="" class="main__img1" />
+          <img src="images/image-mockups.png" alt="" class="main__img2" /> -->
+          <!-- <div class="image1"></div>
+          <div class="image2"></div> -->
+        </div>
+        -
       </main>
       <section class="advantages">
         <h1>Why choose Easybank?</h1>
@@ -140,8 +145,7 @@
       </section>
       <footer class="footer">
         <div class="footer__logowrapper">
-          <img src="images/icon-hamburger.svg" alt="" class="navtop__logo" />
-          <span>easybank</span>
+          <img src="images/logo.svg" alt="" class="footer__logo" />
         </div>
         <div class="footer__socialicons">
           <img src="images/icon-facebook.svg" alt="" />
