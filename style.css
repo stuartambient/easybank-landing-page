@@ -62,27 +62,39 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* width: 720px; */
 }
 
 .main__imagewrapper {
   position: relative;
-  flex: 3 0 60%;
+  /* flex: 1 0 60%; */
   border: 1px solid red;
   top: -15rem;
-  background-image: url('images/image-mockups.png'),
-    url('images/bg-intro-desktop.svg');
-  background-position: 25% 120%;
-  background-repeat: no-repeat;
+  /* background-image: url('images/image-mockups.png'),
+    url('images/bg-intro-desktop.svg'); */
+  /* background-origin: border-box; */
+  /* background-position: 200px -20px, 0 0; */
+  /* background-position: left 20rem bottom -23rem, left -3rem top -8rem; */
+  /* background-size: auto, auto; */
+  /* background-repeat: no-repeat;
+  background-size: cover; */
+  width: 100%;
+  /* width: 720px; */
 }
 
 .main__img1 {
-  width: 100%;
+  /* width: 100%; */
   position: absolute;
+  z-index: -1;
+  margin-top: -10rem;
 }
 
 .main__img2 {
   position: absolute;
   z-index: 2;
+  display: block;
+  margin-left: 25%;
+  margin-top: 2%;
 }
 
 .advantages__wrapper,
