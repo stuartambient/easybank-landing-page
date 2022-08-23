@@ -26,22 +26,27 @@
     </style>
   </head>
   <body>
-    <!-- <div class="page__wrapper"> -->
-      <nav class="navtop">
-        <div class="navtop__logowrapper">
+    <div class="page__wrapper">
+      <header class="header">
+         <div class="navtop__logowrapper">
           <img src="images/logo.svg" alt="" class="navtop__logo" />
         </div>
-        <ul class="navtop__menu">
-          <li class="navtop__menuitems">Home</li>
-          <li class="navtop__menuitems">About</li>
-          <li class="navtop__menuitems">Contact</li>
-          <li class="navtop__menuitems">Blog</li>
-          <li class="navtop__menuitems">Careers</li>
+        <!-- <nav class="nav"> -->
+        <ul class="nav__menu">
+          <li class="nav__item">Home</li>
+          <li class="nav__item">About</li>
+          <li class="nav__item">Contact</li>
+          <li class="nav__item">Blog</li>
+          <li class="nav__item">Careers</li>
+          
         </ul>
-        <p class="navtop__cta">Request invite</p>
-      </nav>
-
+        
+      <!-- </nav> -->
+      <button class="nav__cta">Request invite</button>
+      </header>
       <main class="main">
+
+      
         <div class="main__text">
           <h1>Next generation digital banking</h1>
           <p>
@@ -49,26 +54,22 @@
             one-stop-shop for spending, saving, budgeting, investing, and much
             more.
           </p>
-          <p class="main__cta">Request Invite</p>
+          <button class="main__cta">Request Invite</button>
         </div>
 
-        <div class="main__imagewrapper">
-          <!-- <img src="images/bg-intro-desktop.svg" alt="" class="main__img1" />
-          <img src="images/image-mockups.png" alt="" class="main__img2" /> -->
-          <!-- <div class="image1"></div>
-          <div class="image2"></div> -->
-          <img src="images/bg-intro-desktop.svg" class="main__img1 " alt="">
-          <img src="images/image-mockups.png" class="main__img2" alt="">
-          
+        <div class="main__images">
+          <div class="main__img1"></div>
+          <div class="main__img2"></div>
         </div>
-        -
       </main>
       <section class="advantages">
+        <div class="advantages__text">
         <h1>Why choose Easybank?</h1>
         <p>
           We leverage Open Banking to turn your bank account into your financial
           hub. Control your finances like never before.
         </p>
+      </div>
         <div class="advantages__wrapper">
           <div class="advantages__card">
             <img src="images/icon-online.svg" alt="" />
@@ -102,10 +103,12 @@
               account. Tracking your money has never been easier.
             </p>
           </div>
-        </div>
+       </div> 
       </section>
       <section class="articles">
+        <div class="articles__text">
         <h1>Latest Articles</h1>
+      </div>
         <div class="articles__wrapper">
           <div class="article">
             <img src="images/image-currency.jpg" alt="" />
@@ -177,6 +180,6 @@
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-   <!--  </div> -->
+   <!--  </div> 
   </body>
 </html>
