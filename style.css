@@ -32,9 +32,14 @@ body {
   margin-left: 150px;
   width: 100vw;
   overflow: hidden;
+  display: grid;
+  grid-template-rows: 8rem auto;
+  grid-template-columns: 30% 70%;
 }
 
 .header {
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
   display: grid;
   height: 8rem;
   border: 1px solid black;
@@ -54,12 +59,11 @@ body {
   padding: 0 1rem;
 }
 
-.nav__cta {
+.cta {
   /*   align-self: center; */
   width: 200px;
   justify-self: center;
   display: flex;
-  justify-content: center;
   background: linear-gradient(
     to left,
     var(--primary-bright-cyan),
@@ -69,97 +73,267 @@ body {
   font-size: 1.7rem;
   border-radius: 2.5rem;
   display: inline-block;
-  padding: 1.5rem;
+  padding: 1.3rem;
+  position: relative;
+  left: -10%;
 }
 
 .main {
-  display: grid;
-  grid-template-columns: 35% 65%;
-  height: 1200px;
+  grid-row: 2 / 3;
+  grid-column: 1 / 3;
   position: relative;
   z-index: -1;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 800px;
 }
 
 .main__text {
-  height: 100%;
-
-  /*  display: flex;
-  flex-direction: column; */
+  grid-row: 1 / 2;
 }
-
-/* .main__text::before {
-  content: ' ';
-  float: right;
-  background-image: url('images/bg-intro-desktop.svg');
-  background-size: 100% 100%;
-  /* width: 492px;
-  margin: 0;
-  shape-outside: content-box
-    polygon(
-      5.2% 42.6%,
-      99.2% 42.8%,
-      45.9% 99.7%,
-      33.2% 80.6%,
-      19.5% 77.7%,
-      0.4% 54.2%
-    );
-} */
 
 .main__text h1 {
   font-weight: 200;
-  font-size: 4.5rem;
-  margin-top: 60%;
+  font-size: 5.7rem;
+  margin-top: 40%;
 }
 
 .main__text p {
+  font-size: 2.5rem;
+  font-weight: lighter;
+  margin-top: 3rem;
+  line-height: 1.8;
+}
+
+.main__text .cta {
+  position: initial;
+  margin-top: 2rem;
+}
+
+.main__images {
+  position: relative;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  /*   border: 1px solid red; */
+  background: transparent;
+  /* height: 60vh; */
+}
+
+.main__img1 {
+  position: absolute;
+  left: 15%;
+  top: -20%;
+  z-index: 2;
+}
+
+.main__img2 {
+  position: absolute;
+  top: -30%;
+}
+
+.main__cta {
+  background-color: green;
+}
+
+/* ADAVANTAGES */
+
+.advantages {
+  grid-row: 3 / 4;
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-flow: row;
+  background-color: var(--neutral-very-light-gray);
+  grid-column-gap: 4rem;
+}
+
+.advantages__text {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  margin-top: -10%;
+}
+
+.advantages__text h1 {
+  font-size: 5.7rem;
+  font-weight: 200;
+  margin-top: 3rem;
+  line-height: 1.8;
+}
+
+.advantages__text p {
   font-size: 2.5rem;
   font-weight: 200;
   margin-top: 3rem;
   line-height: 1.8;
 }
 
-.main__images {
-  position: relative;
-  border: 1px solid red;
-
-  position: relative;
-}
-
-.main__img1 {
-  position: absolute;
+.advantages__wrapper {
+  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+  height: 38rem;
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
   width: 80%;
-  height: 80%;
-  background-image: url('images/image-mockups.png');
-  /* background-position: 200px; */
-  left: 15%;
-  top: -70px;
-  z-index: 2;
 }
 
-.main__img2 {
-  position: absolute;
+.advantages__card {
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; */
+  margin: 0 1rem;
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, 25%);
+}
+.advantages h2 {
+  font-size: 3.2rem;
+  font-weight: lighter;
+  align-self: center;
+}
+
+.advantages p {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.advantages__img--wrapper {
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+}
+
+.advantages__img--wrapper img {
   width: 100%;
   height: 100%;
-  background-image: url('images/bg-intro-desktop.svg');
-  background-position: -50px -300px;
 }
 
-.main__img1,
-.main__img2 {
-  background-repeat: no-repeat;
-  background-size: cover;
+.articles__img--wrapper img {
+  width: 100%;
+  height: 100%;
 }
 
-.main__cta {
-  background-color: green;
+.advantages__wrapper p {
+  margin-top: 10%;
 }
-.advantages__wrapper,
-.articles__wrapper {
-  display: flex;
+
+.articles {
+  grid-row: 4 / 5;
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-flow: row;
+  /*  grid-column-gap: 4rem; */
+}
+
+.articles__text {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.articles__text h1 {
+  font-size: 5.7rem;
+  font-weight: lighter;
 }
 
 .article {
+  padding: 3rem 0;
 }
-.article img {
+
+.article h2 {
+  font-size: 2.5rem;
+}
+
+.articles__wrapper {
+  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+  /*  display: flex; */
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+}
+
+.article {
+  margin: 0 1rem;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, min-content);
+  grid-row-gap: 2rem;
+}
+
+/* FOOTER */
+
+.footer {
+  grid-row: 5 / 6;
+  grid-column: 1 / 3;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 20rem;
+  align-items: center;
+  background: black;
+  grid-column-gap: 5rem;
+}
+
+.footer__left {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__socialicons {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.footer__socialicons img {
   width: 3rem;
+  height: 3rem;
+}
+
+.footer__nav {
+  grid-row: 1 / 3;
+  grid-column: 2 / 3;
+  list-style: none;
+  display: grid;
+  grid-template-columns: [col1-start] 50% [col1-end col2-start] 50% [col2-end];
+  grid-template-rows: repeat(3, 3rem);
+  justify-items: space-evenly;
+}
+
+.footer__nav li {
+  color: white;
+}
+
+.footer__nav li:nth-child(-n + 3) {
+  grid-column: 1 /2;
+}
+
+.footer__nav li:nth-child(n + 4) {
+  grid-column: 2 / 3;
+}
+
+.footer__nav li:nth-child(1) {
+  grid-row: 1 / 2;
+}
+
+.footer__nav li:nth-child(4) {
+  grid-row: 1 / 2;
+}
+
+.footer__nav li:nth-child(5) {
+  grid-row: 2 / 3;
+}
+
+.footer__right {
+  grid-row: 1 / 3;
+  grid-column: 3 / 4;
 }
